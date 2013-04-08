@@ -47,7 +47,7 @@
 			
 			/* 글 삭제 function */
 			function fn_egov_delete() {
-		        jConfirm('삭제 하시겠습니까?', '샘플 프로그램', 'g', function(confirm) {
+		        jConfirm('삭제 하시겠습니까?', 'Pilot Project', 'a', function(confirm) {
 			        if(confirm) {
 		                document.detailForm.action = "<c:url value='/sample/deleteSample.do'/>";
 		                document.detailForm.submit();        					      
