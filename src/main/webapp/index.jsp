@@ -26,7 +26,7 @@
 <body>
 
 	<!-- page start -->
-	<div data-role="page">
+	<div data-role="page" data-theme="a">
 
 		<!-- header start -->
 		<div data-role="header">
