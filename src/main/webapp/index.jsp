@@ -43,7 +43,7 @@
 
 		<!-- footer start -->
 		<div data-role="footer">
-			<h4>footer</h4>
+			<h4>Pilot Project</h4>
 		</div>
 		<!-- footer end -->
 
