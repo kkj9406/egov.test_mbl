@@ -115,7 +115,7 @@
 		            			<h3><c:out value="${result.name}"/></h3>		            			
 		            			<br>		            			
 		            			<p class="ui-li-aside">작성자 : <c:out value="${result.regUser}"/>
-		            			<br>작성일 : <c:out value="${result.date}"/></p>
+		            			<br><c:out value="${result.date}"/></p>
 		            			
 		            		</a></li>
 	            		</c:forEach>
