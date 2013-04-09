@@ -1,8 +1,6 @@
 package egovframework.rte.cmmn.web;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,20 +51,22 @@ public class LoginController {
         }
     	
     } 
+    /**
+     * 현제 세션에 세션값이 존재하면 로그인한 상태이므로 로그아웃을 하고 로그인 페이지로 이동
+     * 세션값이 없다면 세션이 만료된 상태이므로 로그인페이지로 이동
+     */
     @RequestMapping("/sample/logout.do")
-    public String logout(HttpServletRequest request, HttpServletResponse response, 
-    		@RequestParam("regUser") String regUser,
-            @RequestParam("password") String password) {
+    public String logout(HttpServletRequest request) {
     	//계정정보인 regUser와 password를 파라미터로 받는다.
     	
     	HttpSession session = request.getSession();
     	
-    	  if (request.getSession().getAttribute(regUser)!=null) {//계정이 null이 아니면
-              session.invalidate();         
-              return "/sample/login";
+    	  if (request.getSession()!=null) {//세션이 null이아니면
+              session.invalidate(); //세션을 없애고        
+              return "/sample/login";//로그인페이지로 이동
           }
-          else{ 
-              return "/sample/login";
+          else{ //세션이 없으면
+              return "/sample/login";//그냥 로그인페이지로 이동
           }   	
     } 
     // loginSuccess.do 로 호출된 처리
