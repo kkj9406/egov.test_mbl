@@ -64,8 +64,8 @@
 			
 			/* 로그아웃 function */
 			function fn_egov_logout(){
-				document.listForm.action = "<c:url value='/sample/logout.do'/>";
-			   	document.listForm.submit();
+				document.detailForm.action = "<c:url value='/sample/logout.do'/>";
+			   	document.detailForm.submit();
 			}
 		</script>
 
