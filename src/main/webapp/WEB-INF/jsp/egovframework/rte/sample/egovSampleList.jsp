@@ -64,6 +64,11 @@
 				});
 			});
 			
+			/* 로그아웃 function */
+			function fn_egov_logout(){
+				document.listForm.action = "<c:url value='/sample/logout.do'/>";
+			   	document.listForm.submit();
+			}
 		</script>
 		
 		<style type="text/css">
@@ -80,6 +85,7 @@
             <!-- header start -->
             <div data-role="header" data-position="inline" data-theme="a">
                 <h1>게시판</h1>
+                <a href="javascript:fn_egov_logout();" data-ajax="false" data-icon="delete" class="ui-btn-left">로그아웃</a>
                 <a href="javascript:fn_egov_addView();" data-ajax="false" data-icon="plus" class="ui-btn-right">글등록</a>
             </div>  
             <!-- header end -->

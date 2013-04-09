@@ -1,6 +1,9 @@
 package egovframework.rte.cmmn.web;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -50,7 +53,22 @@ public class LoginController {
         }
     	
     } 
-
+    @RequestMapping("/sample/logout.do")
+    public String logout(HttpServletRequest request, HttpServletResponse response, 
+    		@RequestParam("regUser") String regUser,
+            @RequestParam("password") String password) {
+    	//계정정보인 regUser와 password를 파라미터로 받는다.
+    	
+    	HttpSession session = request.getSession();
+    	
+    	  if (request.getSession().getAttribute(regUser)!=null) {//계정이 null이 아니면
+              session.invalidate();         
+              return "/sample/login";
+          }
+          else{ 
+              return "/sample/login";
+          }   	
+    } 
     // loginSuccess.do 로 호출된 처리
     // (@RequestMapping(value="/loginSuccess.do", method=RequestMethod.GET) 를 위한
     // 메소드(loginSuccess) 를 void 타입의 public 메소드로 작성
