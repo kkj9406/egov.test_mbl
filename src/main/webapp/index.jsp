@@ -36,8 +36,10 @@
 
 		<!-- content start -->
 		<div data-role="content">
-			<a href="/test_mbl/sample/egovSampleList.do" data-ajax="false">Board Page</a><br>
-			<a href="/test_mbl/sample/login.do" data-ajax="false">Login Page</a>
+			<a href="/test_mbl/sample/egovSampleList.do" data-role="button"
+			 data-theme="a" data-ajax="false">Board Page</a><br>
+			<a href="/test_mbl/sample/login.do" data-role="button"
+			 data-theme="a" data-ajax="false">Login Page</a>
 		</div>
 		<!-- content end -->
 

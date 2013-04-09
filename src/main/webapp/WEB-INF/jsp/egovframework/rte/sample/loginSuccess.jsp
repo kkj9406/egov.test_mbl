@@ -40,7 +40,8 @@
 			계정의 regUser로 접근하여 로그인 성공 메세지를 출력한다. -->
 			${sessionScope.UserAccount.regUser} 님은 로그인에 성공했습니다. <br />
 			<!-- egovSampleList.do로 이동하는 링크 -->
-			<a href="/test_mbl/sample/egovSampleList.do" data-ajax="false">게시판으로 가기</a>
+			<a href="/test_mbl/sample/egovSampleList.do" data-role="button" data-ajax="false"
+									data-theme="a">게시판으로</a>
 		</div>
 		<!-- content end -->
 

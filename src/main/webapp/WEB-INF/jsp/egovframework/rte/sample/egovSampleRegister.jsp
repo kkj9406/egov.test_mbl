@@ -53,7 +53,7 @@
 		                document.detailForm.submit();        					      
 			        }
 		        });
-			}
+			}			
 			
 			/* 글 등록 function */
 			function fn_egov_save() {	
@@ -85,7 +85,7 @@
 					<c:out value="${registerFlag}" />
 				</c:if>
 			</h1>
-			<a href="<c:url value="/sample/egovSampleList.do"/>"
+			<a href="<c:url value="javascript:fn_egov_selectList();"/>"
 				data-ajax="false" data-icon="grid" class="ui-btn-right">목록</a>
 		</div>
 		<!-- header end -->
