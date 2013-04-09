@@ -61,6 +61,12 @@
 		    	frm.action = "<c:url value="${registerFlag == '등록' ? '/sample/addSample.do' : '/sample/updateSample.do'}"/>";
 		    	document.detailForm.submit();
 			}
+			
+			/* 로그아웃 function */
+			function fn_egov_logout(){
+				document.listForm.action = "<c:url value='/sample/logout.do'/>";
+			   	document.listForm.submit();
+			}
 		</script>
 
 </head>
@@ -85,6 +91,7 @@
 					<c:out value="${registerFlag}" />
 				</c:if>
 			</h1>
+			<a href="javascript:fn_egov_logout();" data-ajax="false" data-icon="delete" class="ui-btn-left">로그아웃</a>
 			<a href="<c:url value="javascript:fn_egov_selectList();"/>"
 				data-ajax="false" data-icon="grid" class="ui-btn-right">목록</a>
 		</div>
