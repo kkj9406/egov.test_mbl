@@ -43,7 +43,7 @@
 				<!-- vo에서 regUser라는 변수가 있다면 form tag안에서 regUser에 입력을 받는경우
 				알아서 setter를 사용하고 수정시 또한 알아서 getter를 사용한다. -->
 				<!-- action은 form에서 submit이 일어날 경우 이동할 경로이다. -->
-				아이디 : <input type=text name="regUser" placeholder="ID"> 패스워드: <input
+				아이디 : <input type=text name="regUser" placeholder="ID" autofocus> 패스워드: <input
 					type=password name="password" placeholder="PASSWORD">
 				<input type=submit value="로그인" data-ajax="false">
 			</form:form>
