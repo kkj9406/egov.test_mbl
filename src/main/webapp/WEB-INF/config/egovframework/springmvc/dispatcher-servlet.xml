@@ -59,7 +59,9 @@
 			</props>
 		</property>
 	</bean>
-
+	
+	<!-- For Interceptor -->
+	<bean id="authenticInterceptor" class="egovframework.rte.cmmn.interceptor.AuthenticInterceptor" />
 	<bean id="selectAnnotaionMapper"
 		class="egovframework.rte.ptl.mvc.handler.SimpleUrlAnnotationHandlerMapping"
 		p:order="1">
@@ -80,12 +82,14 @@
 			</set>
 		</property>
 	</bean>
+	
 	<!-- - This bean configures the 'prefix' and 'suffix' properties of - InternalResourceViewResolver, 
 		which resolves logical view names - returned by Controllers. For example, 
 		a logical view name of "vets" - will be mapped to "/WEB-INF/jsp/vets.jsp". -->
 	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver"
 		p:order="2" p:viewClass="org.springframework.web.servlet.view.JstlView"
 		p:prefix="/WEB-INF/jsp/egovframework/rte/" p:suffix=".jsp" />
+		
 	<bean id="annotationMapper"
 		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"
 		p:order="3" />
@@ -96,12 +100,12 @@
 	<bean id="messageSource"
 		class="org.springframework.context.support.ResourceBundleMessageSource"
 		p:basename="messages" />
-
-	<bean id="authenticInterceptor" class="egovframework.rte.cmmn.interceptor.AuthenticInterceptor" />
+	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:viewClass="org.springframework.web.servlet.view.JstlView" p:prefix="/WEB-INF/jsp/"
 		p:suffix=".jsp" />
+		
 	<!-- Integrated Apache Commons Validator by Spring Modules -->
 	<bean id="beanValidator"
 		class="org.springmodules.validation.commons.DefaultBeanValidator">
